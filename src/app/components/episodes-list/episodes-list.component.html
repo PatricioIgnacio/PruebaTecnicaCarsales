@@ -1,0 +1,11 @@
+<div class="episodes-list">
+    <h2>Lista de Episodios</h2>
+    <ul>
+      <li *ngFor="let episode of episodes" (click)="onSelectEpisode(episode)">
+        {{ episode.name }} - {{ episode.episode }}
+      </li>
+    </ul>
+  
+    <app-episode-detail *ngIf="selectedEpisode" [episode]="selectedEpisode"></app-episode-detail>
+  </div>
+  
